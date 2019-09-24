@@ -52,8 +52,8 @@ dependencies {
     api rootProject.ext.dependencies["fastjson"]
     api rootProject.ext.dependencies["okhttp3-logging-interceptor"]
 
-    debugApi rootProject.ext.dependencies["stetho"]
-    debugApi rootProject.ext.dependencies["stetho-okhttp3"]
+    rootProject.ext.dependencies["stetho"]
+    rootProject.ext.dependencies["stetho-okhttp3"]
 
     api rootProject.ext.dependencies["SmartRefreshLayout"]
     api rootProject.ext.dependencies["SmartRefreshHeader"]
