@@ -4,11 +4,10 @@ import com.example.myapplication.data.http.entity.envicloud.EnvironmentCloudCity
 import com.example.myapplication.data.http.entity.envicloud.EnvironmentCloudForecast;
 import com.example.myapplication.data.http.entity.envicloud.EnvironmentCloudWeatherLive;
 
-import java.util.Observable;
 
 import retrofit2.http.GET;
-import retrofit2.http.Part;
 import retrofit2.http.Path;
+import rx.Observable;
 
 public interface EnvironmentCloudWeatherService {
 
