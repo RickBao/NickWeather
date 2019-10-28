@@ -1,6 +1,6 @@
 package com.example.myapplication.data.http;
 
-public class ApiConstants {
+public final class ApiConstants {
 
     static final String MI_WEATHER_API_HOST = "http://weatherapi.market.xiaomi.com/wtr-v2/";
     static final String KNOW_WEATHER_API_HOST = "http://knowweather.duapp.com/";

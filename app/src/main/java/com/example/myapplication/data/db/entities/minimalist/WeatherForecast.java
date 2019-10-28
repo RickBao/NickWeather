@@ -44,10 +44,10 @@ public class WeatherForecast {
     private String weatherNight;
 
     @DatabaseField(columnName = TEMP_MAX_FIELD_NAME)
-    private String tempMax;
+    private int tempMax;
 
     @DatabaseField(columnName = TEMP_MIN_FIELD_NAME)
-    private String tempMin;
+    private int tempMin;
 
     @DatabaseField(columnName = WIND_FIELD_NAME)
     private String wind;
@@ -93,7 +93,7 @@ public class WeatherForecast {
     }
 
     public WeatherForecast(String cityId, String weather, String weatherDay, String weatherNight,
-                           String tempMax, String tempMin, String wind, String date, String week) {
+                           int tempMax, int tempMin, String wind, String date, String week) {
         this.cityId = cityId;
         this.weather = weather;
         this.weatherDay = weatherDay;
@@ -145,19 +145,19 @@ public class WeatherForecast {
         this.weatherNight = weatherNight;
     }
 
-    public String getTempMax() {
+    public int getTempMax() {
         return tempMax;
     }
 
-    public void setTempMax(String tempMax) {
+    public void setTempMax(int tempMax) {
         this.tempMax = tempMax;
     }
 
-    public String getTempMin() {
+    public int getTempMin() {
         return tempMin;
     }
 
-    public void setTempMin(String tempMin) {
+    public void setTempMin(int tempMin) {
         this.tempMin = tempMin;
     }
 

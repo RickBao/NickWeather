@@ -265,7 +265,7 @@ public class EnvironmentCloudForecast {
             }
         }
 
-        private static class AirEntity {
+        public static class AirEntity {
             /**
              * txt: 气象条件对空气污染物稀释，扩散和清除无明显影响，易感人群应适当减少室外活动时间
              */

@@ -4,8 +4,10 @@ import android.content.Context;
 
 import com.example.library.NetworkUtils;
 import com.example.myapplication.data.db.dao.WeatherDao;
+import com.example.myapplication.data.db.entities.adapter.KnowWeatherAdapter;
 import com.example.myapplication.data.db.entities.minimalist.Weather;
 import com.example.myapplication.data.http.ApiClient;
+import com.example.myapplication.data.http.ApiConstants;
 
 import java.sql.SQLException;
 
@@ -32,6 +34,15 @@ public class WeatherDataRepository {
         }
 
         Observable<Weather> observableForGetWeatherFromNetwork = null;
-        switch (ApiClient.)
+        switch (ApiClient.configuration.getDataSourceType()) {
+            case ApiConstants.WEATHER_DATA_SOURCE_TYPE_KNOW:
+                observableForGetWeatherFromNetwork = ApiClient.weatherService.getKnowWeather(cityId)
+                        .map(knowWeather -> new KnowWeatherAdapter(knowWeather).getWeather());
+                break;
+            case ApiConstants.WEATHER_DATA_SOURCE_TYPE_MI:
+                break;
+            case ApiConstants.WEATHER_DATA_SOURCE_TYPE_ENVIRONMENT_CLOUD:
+                break;
+        }
     }
 }

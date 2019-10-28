@@ -11,7 +11,7 @@ public class KnowWeather {
     private AqiEntity aqi;
     private List<HoursForecastEntity> hoursForecast;
     private List<DailyForecastEntity> dailyForecast;
-    private List<LifeIndex> lifeIndex;
+    private List<LifeIndexEntity> lifeIndex;
     private List<?> alarms;
 
     public String getCityId() {
@@ -54,11 +54,11 @@ public class KnowWeather {
         this.dailyForecast = dailyForecast;
     }
 
-    public List<LifeIndex> getLifeIndex() {
+    public List<LifeIndexEntity> getLifeIndex() {
         return lifeIndex;
     }
 
-    public void setLifeIndex(List<LifeIndex> lifeIndex) {
+    public void setLifeIndex(List<LifeIndexEntity> lifeIndex) {
         this.lifeIndex = lifeIndex;
     }
 
@@ -299,7 +299,7 @@ public class KnowWeather {
         }
     }
 
-    private static class LifeIndexEntity {
+    public static class LifeIndexEntity {
         private String name;
         private String level;
         private String content;
